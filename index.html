@@ -641,7 +641,7 @@ footer .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:v
       const userRef = doc(db, 'usuarios', user.uid);
       const snap = await getDoc(userRef);
       if (snap.exists() && snap.data().skill) {
-        window.location.href = '/site/dashboard.html';
+        window.location.href = '/crime-zone11/dashboard.html';
       } else {
         document.getElementById('skillPicker').classList.add('active');
         document.getElementById('googleBtn').style.display = 'none';
@@ -693,7 +693,7 @@ async function confirmSkill(){
     ultimoLogin: window._serverTimestamp(),
     isAdmin: false
   });
-  window.location.href = '/site/dashboard.html';
+  window.location.href = '/crime-zone11/dashboard.html';
 }
 </script>
 </body>

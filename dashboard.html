@@ -527,7 +527,7 @@ const SKILL_NAMES = {mec:'Mecânico',hac:'Hacker',arm:'Armeiro'};
 let currentUser = null;
 let userData = null;
 
-window.logout = async () => { await signOut(auth); window.location.href='/site/index.html'; };
+window.logout = async () => { await signOut(auth); window.location.href='/crime-zone11/index.html'; };
 
 window.showPage = (id) => {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -644,10 +644,10 @@ function calcMktRecebe() {
 }
 
 onAuthStateChanged(auth, async (user) => {
-  if (!user) { window.location.href='/site/index.html'; return; }
+  if (!user) { window.location.href='/crime-zone11/index.html'; return; }
   currentUser = user;
   const snap = await getDoc(doc(db,'usuarios',user.uid));
-  if (!snap.exists()) { window.location.href='/site/index.html'; return; }
+  if (!snap.exists()) { window.location.href='/crime-zone11/index.html'; return; }
   userData = snap.data();
 
   document.getElementById('userAvatar').src = user.photoURL || '';
